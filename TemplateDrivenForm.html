@@ -1,0 +1,35 @@
+<!--<div class="container">
+    <h1>Signup Form</h1>
+
+    <form #signupform="ngForm" (ngSubmit)="onSubmit(signupform)">
+        <div class="form-group">
+            <label for="first_name">FirstName</label>
+            <input type="text" class="form-control" required
+            name="first_name" [(ngModel)]="first_name">
+
+        </div>
+
+        <div class="alert alert-danger"
+        *ngIf="signupform.controls['first_name'].touched == true && signupform.controls['first_name'].invalid==true">
+    
+        First Name is Required
+        </div>
+        <div class="form-group">
+            <label for="last_name">LastName</label>
+            <input type="text" class="form-control" required
+            name="last_name" [(ngModel)]="last_name">
+
+            <button type="submit" class="btn btn-success" [disabled]="signupform.invalid ==true">Submit</button>
+            
+        </div>
+        <div class="alert alert-warning"
+        *ngIf="signupform.controls['last_name'].touched == true && signupform.controls['last_name'].invalid==true">
+    
+        Last Name is Required
+        </div>
+
+        
+    </form>
+
+</div>
+-->

@@ -1,0 +1,33 @@
+<html>
+    <haed>
+        <title>
+            Dropdown Validation
+        </title>
+    </haed>
+    <body>
+        <form action="success.html" method="GET">
+            Education:<select name="education">
+                <option value="0" disabled  >Please Select</option>
+                <option value="1">BE</option>
+                 <option value="1" selected>MCA</option>
+                 <option value="1">MBA</option>
+            </select>
+            <input type="submit" value="submit" onclick="return validate()"/>
+        </form>
+
+        <script>
+            function validate()
+            {
+                var f1=document.forms[0];
+                var edu=f1.education;
+                if(edu.value==0)
+                {
+                    alert("Please select education");
+                    edu.focus();
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

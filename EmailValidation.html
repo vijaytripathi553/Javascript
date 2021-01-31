@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Email validation
+        </title>
+    </head>
+    <body>
+        <f>
+            Email:<input type="text" name="email" onblur="validate(this)"/><span id="emailError"></span>
+        </form>
+        <script>
+            function validate(field)
+            {
+                var value=field.value;
+                var emailError=document.getElementById("emailError");
+                var atIndex=value.indexOf('@');
+                if(atIndex == -1)
+                {
+                    emailError.innerHTML="Should have @";
+                    emailError.style.color="red";
+                    return;
+                }
+                else
+                {
+                    emailError.innerHTML="";
+                }
+
+                var dotIndex=value.indexOf('.',atIndex);
+                if(dotIndex == -1)
+                {
+                    emailError.innerHTML="There should be atleast one dot after @";
+                    emailError.style.color="red";
+                    return;
+
+                }
+                else
+                {
+                    emailError.innerHTML="";
+                }
+                //Likewise
+            }
+
+
+        </script>
+    </body>
+
+</html>
